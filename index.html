@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - A Pen by  Landon Powell</title>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <div id="temperature-converter">
+        <div id="input-div" class="big-div">
+          <div id="input-title" class="title-div">INPUT</div>
+          <input type="text" id="input-text" value="98" /><br>
+          <input type="button" value="°F" id="active-in" class="button-in" onclick="button_in_pressed(this)"/>
+          <input type="button" value="°C" class="button-in" onclick="button_in_pressed(this)"/>
+          <input type="button" value="°K" class="button-in" onclick="button_in_pressed(this)"/>
+        </div>
+
+        <div id="output-div" class="big-div">
+          <div id="output-title" class="title-div">OUTPUT</div>
+          <input type="text" id="output-text" value="36.667"/><br>
+          <input type="button" value="°F" class="button-out" onclick="button_out_pressed(this)"/>
+          <input type="button" value="°C" id="active-out" class="button-out" onclick="button_out_pressed(this)"/>
+          <input type="button" value="°K" class="button-out" onclick="button_out_pressed(this)"/>
+        </div>
+</div>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
