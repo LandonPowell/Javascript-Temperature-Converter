@@ -16,7 +16,7 @@ function temperature_conversion() {
         if (Output_Units === "°C") {
             document.getElementById("output-text").value = round((Input_Text - 32) * 5/9);
         }
-        if (Output_Units === "°K") {
+        if (Output_Units === "K") {
             document.getElementById("output-text").value = round(((Input_Text - 32) * 5/9) + 273.15);
         }
     }
@@ -27,18 +27,18 @@ function temperature_conversion() {
         if (Output_Units === "°C") {
             document.getElementById("output-text").value = round(Input_Text);
         }
-        if (Output_Units === "°K") {
+        if (Output_Units === "K") {
             document.getElementById("output-text").value = round(Input_Text + 273.15);
         }
     }
-    if (Input_Units === "°K") {
+    if (Input_Units === "K") {
         if (Output_Units === "°F") {
             document.getElementById("output-text").value = round((Input_Text * 9/5) - 459.67);
         }
         if (Output_Units === "°C") {
             document.getElementById("output-text").value = round(Input_Text - 273);
         }
-        if (Output_Units === "°K") {
+        if (Output_Units === "K") {
             document.getElementById("output-text").value = round(Input_Text);
         }
     }
