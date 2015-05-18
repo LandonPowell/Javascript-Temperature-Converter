@@ -38,7 +38,7 @@ function temperature_conversion() {
         if (Output_Units === "°C") {
             document.getElementById("output-text").value = round(Input_Text - 273.15);
         }
-        if (Output_Units === "°K") {
+        if (Output_Units === "K") {
             document.getElementById("output-text").value = round(Input_Text);
         }
     }
