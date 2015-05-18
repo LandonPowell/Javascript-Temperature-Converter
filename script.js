@@ -8,40 +8,56 @@ function round(float) {
 
 function temperature_conversion() {
     Input_Text = parseFloat(document.getElementById("input-text").value);
+    var result;
+    
+    if (Input_Units === Input_Text) {
+        result = round(Input_Text);
+        document.getElementById("output-text").value = result;
+        return;
+    }
+    
+    function FtoC(num) { return (num-32) * 5/9; }
+    function CtoF(num) { return (num * 9/5) + 32; }
+    function CtoK(num) { return num + 273.15; }
+    function KtoC(num) { return num + 273.15; }
+    
+    switch (Input_Units) {
+        case "ºF":
+            switch (Output_Units) {
+                case "ºC":
+                    result = FtoC(Input_Text);
+                    break;
+                case "ºK":
+                    result = CtoK(FtoC(Input_Text));
+                    break;
+            }
+            break;
+       
+        case "ºC":
+            switch (Output_Units) {
+                case "ºF":
+                    result = CtoF(Input_Text);
+                    break;
+                case "ºK":
+                    result = CtoK(Input_Text);
+                    break;
+            }
+            break;
 
-    if (Input_Units === "°F") {
-        if (Output_Units === "°F") {
-            document.getElementById("output-text").value = round(Input_Text);
-        }
-        if (Output_Units === "°C") {
-            document.getElementById("output-text").value = round((Input_Text - 32) * 5/9);
-        }
-        if (Output_Units === "K") {
-            document.getElementById("output-text").value = round(((Input_Text - 32) * 5/9) + 273.15);
-        }
+
+        case "ºK":
+            switch (Output_Units) {
+                case "ºF":
+                    result = CtoF(KtoC(Input_Text));
+                    break;
+                case "ºC":
+                    result = KtoC(Input_Text);
+                    break;
+            }
+            break;
     }
-    if (Input_Units === "°C") {
-        if (Output_Units === "°F") {
-            document.getElementById("output-text").value = round((Input_Text * 9/5) + 32);
-        }
-        if (Output_Units === "°C") {
-            document.getElementById("output-text").value = round(Input_Text);
-        }
-        if (Output_Units === "K") {
-            document.getElementById("output-text").value = round(Input_Text + 273.15);
-        }
-    }
-    if (Input_Units === "K") {
-        if (Output_Units === "°F") {
-            document.getElementById("output-text").value = round((Input_Text * 9/5) - 459.67);
-        }
-        if (Output_Units === "°C") {
-            document.getElementById("output-text").value = round(Input_Text - 273);
-        }
-        if (Output_Units === "K") {
-            document.getElementById("output-text").value = round(Input_Text);
-        }
-    }
+    
+    document.getElementById("output-text").value = round(result);
 }
 
 function button_in_pressed(Pressed_Button) {
