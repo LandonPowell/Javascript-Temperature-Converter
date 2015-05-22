@@ -14,25 +14,16 @@ function temperature_conversion() {
 		/* Note Temp_Temp is already assigned */
 		case "°F":
 			Temp_Temp = (Input_Text - 32) / 1.8;
-			break;
 		case "K":
 			Temp_Temp = Input_Text - 273.15;
-			break;
-		default:
-			break;
-	}
+  }
 
 	switch(Output_Units) { // Convert from degrees C
 			/* Note Temp_Temp is in degrees C */
 		case "°F":
 				Temp_Temp = Temp_Temp * 1.8 + 32;
-				break;
 		case "K":
-			Temp_Temp = Temp_Temp + 273.15;
-			break; 
-		/* No need for case C; Temp_Temp is already in C */
-		default:
-			break;
+				Temp_Temp = Temp_Temp + 273.15;
 	}
 	document.getElementById("output-text").value = round(Temp_Temp);
 }
