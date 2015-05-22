@@ -15,7 +15,7 @@ function temperature_conversion() {
 		case "°F":
 			Temp_Temp = (Input_Text - 32) / 1.8;
 			break;
-		case "°K":
+		case "K":
 			Temp_Temp = Input_Text - 273.15;
 			break;
 		default:
@@ -27,7 +27,7 @@ function temperature_conversion() {
 		case "°F":
 				Temp_Temp = Temp_Temp * 1.8 + 32;
 				break;
-		case "°K":
+		case "K":
 			Temp_Temp = Temp_Temp + 273.15;
 			break; 
 		/* No need for case C; Temp_Temp is already in C */
