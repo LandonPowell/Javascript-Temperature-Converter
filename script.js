@@ -21,9 +21,9 @@ function temperature_conversion() {
 	switch(Output_Units) { // Convert from degrees C
 			/* Note Temp_Temp is in degrees C */
 		case "°F":
-				Temp_Temp = Temp_Temp * 1.8 + 32;
+			Temp_Temp = Temp_Temp * 1.8 + 32;
 		case "K":
-				Temp_Temp = Temp_Temp + 273.15;
+			Temp_Temp = Temp_Temp + 273.15;
 	}
 	document.getElementById("output-text").value = round(Temp_Temp);
 }
