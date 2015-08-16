@@ -8,33 +8,32 @@ function round(float) {
 
 function temperature_conversion() {
 	Input_Text = parseFloat(document.getElementById("input-text").value);
-	var Temp_Temp = Input_Text;
+	var Temp = Input_Text;
 
 	switch(Input_Units) { // Convert to degrees C
-		/* Note Temp_Temp is already assigned */
+		/* Note Temp is already assigned */
 		case "°F":
-			Temp_Temp = (Input_Text - 32) / 1.8;
+			Temp = (Input_Text - 32) / 1.8;
 			break;
 		case "K":
-			Temp_Temp = Input_Text - 273.15;
+			Temp = Input_Text - 273.15;
 			break;
 		default:
 			break;
 	}
 
 	switch(Output_Units) { // Convert from degrees C
-			/* Note Temp_Temp is in degrees C */
+			/* Note Temp is in degrees C */
 		case "°F":
-				Temp_Temp = Temp_Temp * 1.8 + 32;
-				break;
+			Temp = Temp * 1.8 + 32;
+			break;
 		case "K":
-			Temp_Temp = Temp_Temp + 273.15;
+			Temp = Temp + 273.15;
 			break; 
-		/* No need for case C; Temp_Temp is already in C */
 		default:
 			break;
 	}
-	document.getElementById("output-text").value = round(Temp_Temp);
+	document.getElementById("output-text").value = round(Temp);
 }
 
 function button_in_pressed(Pressed_Button) {
