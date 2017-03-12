@@ -4,7 +4,7 @@ body {
   background-color:#f7f7f7;
   font-family: "Poiret One";
 }
-.clockBox {
+#clockBox {
   background-color:#fefefe;
   width: 300px;
   height: 400px;
@@ -15,7 +15,7 @@ body {
   top: 50%; left: 50%;
   margin-top: -222px; margin-left: -175px;
 }
-.clockFace {
+#clockFace {
   background-color: #fff;
   width: 300px;
   height: 300px;
@@ -32,15 +32,15 @@ body {
   margin-left: 150px;
   font-size: 1px;
 }
-.second {
+#second {
   border-top: 150px solid #faa;
 }
   
-.textTime {
+#textTime {
   font-size: 28px;
   color: #aab;
 }
-.seconds {
+#seconds {
   color: #faa;
   font-size: 20px;
 }
