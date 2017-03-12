@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
+    <head> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
 
-<head> 
-    <script src="script.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
-    <!-- Miltime Analog Clock -->
-    <div class="clockBox">
-        <div class="clockFace">
-            <div class="hand hour"></div>
-            <div class="hand minute"></div>
-            <div class="hand second"></div>
+    <body>
+        <!-- Miltime Analog Clock -->
+        <div id="clockBox">
+            <div id="clockFace">
+                <div class="hand" id="hour"></div>
+                <div class="hand" id="minute"></div>
+                <div class="hand" id="second"></div>
+            </div>
+            <span id="textTime">Miltime Analog Clock</span>
         </div>
-        <span class="textTime">Miltime Analog Clock</span>
-    </div>
-</body> 
+    </body> 
 
+    <script src="script.js"></script>
 </html>
